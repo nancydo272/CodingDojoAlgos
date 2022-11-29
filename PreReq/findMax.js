@@ -1,11 +1,25 @@
 //Given an array with multiple values (e.g. [-3, 3, 5, 7]), 
 //write a program that prints the maximum number in the array. 
-//(The best way to do this is to have the computer go through each number, 
-//one at a time, and to update the value in a variable called 'maximum'
-// (or whatever you want to name the variable);  imagine that if I gave you no number
-// and asked you what a maximum number is.  
-//What would you say?  Say the first number I gave you was -3 and 
-//asked you what a maximum number is.  What would you say? Say the next number I gave you was 3 
-//and asked you again what a maximum number now is.  What would you say?  
-//Have the computer imitate this behavior of updating the maximum number as you iterate through each number in the array).  
-//Again you're not to use any of the pre-built functions 
+
+var x = [-3, 10, 5, 7]
+var max =x[0]; 
+
+function findMax(){
+    for (i=1; i<x.length; i++){
+        if(x[i]>max){
+            max = x[i];
+        }
+    }
+    console.log(max);
+    return max;
+}
+
+
+
+
+
+findMax(); 
+
+//need to think of it as a number iterating through the array one at a time
+//comparing each number one at a time. 
+//Do not need to set i =0 b/c we already set max =x[0]; 
