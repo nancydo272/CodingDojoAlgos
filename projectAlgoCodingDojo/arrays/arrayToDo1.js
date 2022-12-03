@@ -6,16 +6,16 @@
     //pushFront([5,7,2,3], 8) => [8,5,7,2,3]
     //pushFront([99], 7) => [7,99]
 
-    var x = [5,7,2,3];
-    var y = 8; 
-    var z = []; 
-    function pushFront(){
-        for( var i = 1; i <x.length; i++){
-            x.push(0); 
-            z.push(y); 
-            z[i]=x[i]; 
+    function pushFront(x, val){
+        for(var i=x.length; i>0; i--){
+            x[i]=x[i-1]
         }
-        console.log(z); 
-        return z; 
+        x[0]= val; 
+        console.log(x);
+        return x; 
     }
-    pushFront();
+pushFront([5,7,2,3], 8);
+pushFront([99], 7);
+
+//when you want to shift to the right, you start at the end and subtract. 
+//when you want to shift to the let, you start at the begining and add.
