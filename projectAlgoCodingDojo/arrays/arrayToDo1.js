@@ -68,15 +68,34 @@
     //removeAt([1000,3,204,77], 1) => 3 returned, with [1000,204,77] printed in the function
     //removeAt([8,20,55,44,98], 3) => 44 returned, with [8,20,55,98] printed in the function
 
-    function removeAt(arr, j){
-        var temp = arr[j];
-        for(var i = j; i<arr.length; i++){
-            arr[i]=arr[i+1];
-        }
-        arr.length = arr.length-1;
-        console.log(arr);
-        // console.log(temp);
-        return temp; 
+    // function removeAt(arr, j){
+    //     var temp = arr[j];
+    //     for(var i = j; i<arr.length; i++){
+    //         arr[i]=arr[i+1];
+    //     }
+    //     arr.length = arr.length-1;
+    //     console.log(arr);
+    //     // console.log(temp);
+    //     return temp; 
+    // }
+    // console.log(removeAt([1000,3,204,77], 1));
+    // console.log(removeAt([8,20,55,44,98], 3));
+
+//5. Swap Pairs 
+//Swap positions of successive pairs of values of given array. 
+//If length is odd, do not change the final element.
+    //Examples:
+    //insertAt([1,2,3,4]) => [2,1,4,3]
+    //insertAt(["Brendan",true,42]) => [true,"Brendan",42]
+
+function insertAt(arr){
+    var temp = arr[0];
+    if(arr.length % 2 == 0){
+        arr[0]=arr[arr.length-1];
+        arr[arr.length-1] = temp; 
     }
-    console.log(removeAt([1000,3,204,77], 1));
-    console.log(removeAt([8,20,55,44,98], 3));
+    // console.log(arr);
+    return arr;
+}
+console.log(insertAt([1,2,3,4]));
+console.log(insertAt(["Brendan",true,42]));
