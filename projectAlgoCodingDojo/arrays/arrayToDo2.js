@@ -26,6 +26,15 @@ reverseArray([1, 2, 3, 4, 5]);
 //Second: allow negative shiftBy (shift L, not R).
 //Third: minimize memory usage. With no new array, handle arrays/shiftBys in the millions.
 //Fourth: minimize the touches of each element.
+function rotateArr(arr, shiftBy){
+    for(var i = 0; i<arr.length; i++){
+        var temp = arr[shiftBy]; 
+        arr[shiftBy]= arr[arr.length-1-i]; 
+        arr[arr.length-1-i] = temp;
+    }
+    console.log(arr);
+}
+rotateArr([1, 2, 3], 3); 
 
 //3. Filter Range
 //Alan is good at breaking secret codes. One method is to eliminate values that lie 
