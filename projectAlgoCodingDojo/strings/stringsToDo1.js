@@ -14,7 +14,7 @@
     // console.log(removeBlanks(" Pl ayTha tF u nkyM usi c "));
     // console.log(removeBlanks("I can not BELIEVE it's not BUTTER"));
     // //.split(" ") --> will split at every space
-    // //.split("") --> will split at every character
+    // //.split("") --> will split at every character and space
 
 //2. Get Digits
 //Create a JavaScript function that given a string, returns the integer 
@@ -43,29 +43,36 @@
     //You are allowed to use .split() and .toUpperCase().
     // acronym(" there's no free lunch - gotta pay yer way. ") => "TNFL-GPYW". 
     // acronym("Live from New York, it's Saturday Night!") => "LFNYISN".
-    function acronym(string){
-        array = string.split(" ");
-        // console.log(array.length);
-        var ac = [];
-        for(var i = 0; i<array.length; i++){
-            // console.log(array[i][0])
-            ac.push(array[i][0])
-        }
-        var newString = ac.join('').toUpperCase();
-        return newString;
-    }
-    console.log(acronym(" there's no free lunch - gotta pay yer way. "));
-    console.log(acronym("Live from New York, it's Saturday Night!"));
+    // function acronym(string){
+    //     array = string.split(" ");
+    //     console.log(array.length);
+    //     var ac = [];
+    //     for(var i = 0; i<array.length; i++){
+    //         // console.log(array[i][0])
+    //         ac.push(array[i][0])
+    //     }
+    //     var newString = ac.join('').toUpperCase();
+    //     return newString;
+    // }
+    // console.log(acronym(" there's no free lunch - gotta pay yer way. "));
+    // console.log(acronym("Live from New York, it's Saturday Night!"));
     
     // Count Non-Spaces
     // Create a function that, given a string, returns the number of non-space characters found in the string. 
-    
     // Examples:
-    
     // countNonSpaces("Honey pie, you are driving me crazy") => 29
     // countNonSpaces("Hello world !") => 11
-    
-    
+    function countNonSpaces(string){
+        var count = 0
+        for(var i = 0;i<string.length; i++){
+            if(string[i] != " "){
+                count++
+            }
+        }
+        return count;
+    }
+    console.log(countNonSpaces("Honey pie, you are driving me crazy"))
+    console.log(countNonSpaces("Hello world !"))
     
     // Remove Shorter Strings
     // Create a function that, given an array of strings and a numerical value, returns an array that only contains strings longer than or equal to the given value.
