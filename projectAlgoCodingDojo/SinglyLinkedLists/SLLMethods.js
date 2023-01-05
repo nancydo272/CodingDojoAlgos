@@ -30,4 +30,10 @@ class LinkedList{
         new_node.next = this.head;              //if list is not empty, assign the head to be the next node to the new node
         this.head = new_node;                   //assign the new_node to be the new head of the list
     }
+    removeFront(){
+        let removedNode = this.head;            //var to hold the node that is going to be removed
+        this.head = removedNode.next;           //states that the new head is the node that was next to the old head
+        removedNode.next = null;                //b/c it points to null, its no longer connected to the list
+        return this.head; 
+    }
 }
