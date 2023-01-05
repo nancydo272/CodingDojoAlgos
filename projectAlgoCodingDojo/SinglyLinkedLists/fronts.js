@@ -49,3 +49,5 @@ console.log(SLL1);      //LinkedList {head: Node { data: 5, next: Node { data: 1
 SLL1.removeFront();
 console.log(SLL1);      //LinkedList { head: Node { data: 18, next: null } }
 console.log(SLL1.Front());  //18
+console.log(SLL1.removeFront()); //null
+console.log(SLL1.Front());  //null
