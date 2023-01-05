@@ -31,6 +31,9 @@ class LinkedList{
         this.head = new_node;                   //assign the new_node to be the new head of the list
     }
     removeFront(){
+        if(this.head == null){                  //if the list is empty, return this.head = null
+            return this.head;
+        }
         let removedNode = this.head;            //var to hold the node that is going to be removed
         this.head = removedNode.next;           //states that the new head is the node that was next to the old head
         removedNode.next = null;                //b/c it points to null, its no longer connected to the list

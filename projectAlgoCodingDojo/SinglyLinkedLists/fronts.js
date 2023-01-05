@@ -19,6 +19,9 @@ class LinkedList{
         this.head = new_node;                   
     }
     removeFront(){
+        if(this.head == null){                  
+            return this.head;
+        }
         let removedNode = this.head; 
         this.head = removedNode.next; 
         removedNode.next = null;            
@@ -33,3 +36,7 @@ SLL1.addFront(5);
 console.log(SLL1);      //LinkedList {head: Node { data: 5, next: Node { data: 18, next: null } }}
 SLL1.addFront(73);
 console.log(SLL1);      //LinkedList {head: Node { data: 73, next: Node { data: 5, next: [Node] } }}
+SLL1.removeFront();
+console.log(SLL1);      //LinkedList {head: Node { data: 5, next: Node { data: 18, next: null } }}
+SLL1.removeFront();
+console.log(SLL1);      //LinkedList { head: Node { data: 18, next: null } }
