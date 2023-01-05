@@ -39,4 +39,13 @@ class LinkedList{
         removedNode.next = null;                //b/c it points to null, its no longer connected to the list
         return this.head; 
     }
+    Front(){                                    //method to return the value of the head node
+        if(this.head == null){                  //if the SLL is empty, return null
+            return null;  
+        }else{
+            return this.head.data;              //if not, return the head node's value/data
+        }
+        //ternary operator --> condition ? value_if_true :value_if_false
+        //return this.head ? this.head.data : null; 
+    }
 }
