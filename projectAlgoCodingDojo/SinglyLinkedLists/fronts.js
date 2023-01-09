@@ -35,6 +35,16 @@ class LinkedList{
         }
         //return this.head ? this.head.data : null; 
     }
+    contains(value){
+        var runner = this.head; 
+        while(runner){
+            if(runner.data === value){
+                return true;
+            }
+            runner = runner.next;
+        }
+        return false;
+    }
 }
 
 SLL1 = new LinkedList();
@@ -51,3 +61,5 @@ console.log(SLL1);      //LinkedList { head: Node { data: 18, next: null } }
 console.log(SLL1.Front());  //18
 console.log(SLL1.removeFront()); //null
 console.log(SLL1.Front());  //null
+
+console.log(SLL1.contains(100));    //false

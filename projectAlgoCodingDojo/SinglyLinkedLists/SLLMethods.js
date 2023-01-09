@@ -48,4 +48,14 @@ class LinkedList{
         //ternary operator --> condition ? value_if_true :value_if_false
         //return this.head ? this.head.data : null; 
     }
+    findSum(){                                  //medthod used to iterate through a SLL to find the sum
+        let runner = this.head                  //have to start at the head of the SLL
+        let sum = 0
+
+        while(runner !== null){                 //while loop b/c SLL do not know how many nodes are present, need to know when to stop iterating
+            sum += runner.data                  //b/c runner is set to the current node, its value will equal to the node its own
+            runner = runner.next                //tell the runner to move to the next node 
+        }
+        return sum 
+    }
 }
