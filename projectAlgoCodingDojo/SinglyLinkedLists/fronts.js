@@ -45,6 +45,15 @@ class LinkedList{
         }
         return false;
     }
+    length(){
+        var runner = this.head; 
+        var numOfNodes = 0;
+        while(runner){
+            nodes++;
+            runner = runner.next;
+        }
+        return numOfNodes;
+    }
 }
 
 SLL1 = new LinkedList();
@@ -63,3 +72,5 @@ console.log(SLL1.removeFront()); //null
 console.log(SLL1.Front());  //null
 
 console.log(SLL1.contains(100));    //false
+
+console.log(SLL1.length());
